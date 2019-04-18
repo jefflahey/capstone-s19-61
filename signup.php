@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Residence Hall Sign In</title>
+  <title>Residence Hall Sign Up</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
@@ -43,9 +43,17 @@
         <div id="container" class="container">
             <div class="row text-black">
                 <div class="col-sm text-center">
-                    <h1 class="display-4">Sojourner Truth Apartment Sign In</h1>
+                    <h1 class="display-4">Resident Sign Up</h1>
                     <div class="info-form">
-                        <form action="insertToQueue.php" class="form-inlin justify-content-center">
+                        <form action="insertToResidents.php" class="form-inlin justify-content-center">
+                            <div class="form-group">
+                                <label class="sr-only">Username</label>
+                                <input type="form" class="form-control" placeholder="Enter your username" name=username>
+                            </div>
+                            <div class="form-group">
+                                <label class="sr-only">Password</label>
+                                <input type="form" class="form-control" placeholder="Enter your password" name=password>
+                            </div>
                             <div class="form-group">
                                 <label class="sr-only">First Name</label>
                                 <input type="form" class="form-control" placeholder="Enter your first name" name=firstName>
@@ -59,20 +67,16 @@
                                 <input type="form" class="form-control" placeholder="Enter your Rutgers ID" name=rutgersID>
                             </div>
                             <div class="form-group">
-                                <label class="sr-only">Resident's Name</label>
-                                <input type="form" class="form-control" placeholder="Enter the resident's name" name=residentName>
-                            </div>
-                            <div class="form-group">
                                 <label class="sr-only">Apartment Number</label>
-                                <input type="form" class="form-control" placeholder="Enter the apartment number" name=apartmentNumber>
+                                <input type="form" class="form-control" placeholder="Enter your apartment number" name=apartmentNumber>
                             </div>
                             <button type="submit" class="btn btn-success">Submit</button>
                         </form>
                     </div>
                     <br>
 
-                    <a href="signup.php" class="btn btn-outline-secondary btn-sm" role="button">
-                        Sign Up
+                    <a href="index.php" class="btn btn-outline-secondary btn-sm" role="button">
+                        Home
                     </a>
                     <a href="login.php" class="btn btn-outline-secondary btn-sm" role="button">
                         Login

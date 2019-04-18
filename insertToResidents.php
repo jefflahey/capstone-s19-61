@@ -1,19 +1,16 @@
 <?php
     include "dbconnect.php";
-    date_default_timezone_set("America/New_York");
 
+    $username=$_GET["username"];
+    $password=$_GET["password"];
     $firstName=$_GET["firstName"];
     $lastName=$_GET["lastName"];
     $rutgersID=$_GET["rutgersID"];
-    $residentName=$_GET["residentName"];
     $apartmentNumber=$_GET["apartmentNumber"];
-    $dateTime = date("Y-m-d H:i:s");
 
 
-
-    //Top Drinkers at Bar
-    $resultin = $mysqli->query("INSERT INTO Queued_Guests VALUES ('" .$firstName. "','" .$lastName. "','" .$rutgersID. "', '" .$residentName. "', '" .$apartmentNumber. "', '" .$dateTime. "');"); 
-    $resultout = $mysqli->query("SELECT * from Queued_Guests WHERE ruid='" .$rutgersID. "';");
+    $resultin = $mysqli->query("INSERT INTO Logins VALUES ('" .$username. "', '" .$password. "', '" .$firstName. "','" .$lastName. "','" .$rutgersID. "', '" .$apartmentNumber. "');"); 
+    $resultout = $mysqli->query("SELECT * from Logins WHERE username='" .$username. "';");
     if($resultout->num_rows > 0) {
         echo "Insert was a success!";
     } else{
