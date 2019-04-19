@@ -37,13 +37,13 @@
         table {
             border-collapse: collapse;
             width: 100%;
-            color: #d96459;
+            color: #95273b;
             font-family: monospace;
             font-size: 25px;
             text-align: left
         }
         th {
-            background-color: #d96459;
+            background-color: #95273b;
             color: white;
         }
         tr:nth-child(even) {background-color: #f2f2f2}
