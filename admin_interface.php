@@ -37,13 +37,13 @@
         table {
             border-collapse: collapse;
             width: 100%;
-            color: #95273b;
+            color: #d96459;
             font-family: monospace;
             font-size: 25px;
             text-align: left
         }
         th {
-            background-color: #95273b;
+            background-color: #d96459;
             color: white;
         }
         tr:nth-child(even) {background-color: #f2f2f2}
@@ -72,12 +72,10 @@
             //                AND password = '" .$password. "';"
             //$apt_num = $conn->query($validate);
 		    $sql = "SELECT 
-                        first_name, last_name, apt_num, time
+                        first_name, last_name, apt_num, time, status
                     FROM
-                        Queued_Guests
-                    WHERE
-                        apt_num = '514'
-                    ORDER BY time";
+                        Admin_Table
+                    ORDER BY time desc";
 		    $result = $mysqli->query($sql);
 		
 		    if ($result->num_rows > 0) {
@@ -88,7 +86,7 @@
                     echo "<td>". $row["last_name"] ."</td>";
                     echo "<td>". $row["apt_num"] ."</td>";
                     echo "<td>". $row["time"] ."</td>";
-                    echo "<td> Approved </td>";
+                    echo "<td>". $row["status"] ."</td>";
                     echo "</tr>";
                 }
 			    echo "</table>";

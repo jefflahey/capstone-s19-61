@@ -1,16 +1,18 @@
 <?php
     include "dbconnect.php";
 
-    $username=$_GET["username"];
+    $email=$_GET["email"];
     $password=$_GET["password"];
     $firstName=$_GET["firstName"];
     $lastName=$_GET["lastName"];
     $rutgersID=$_GET["rutgersID"];
     $apartmentNumber=$_GET["apartmentNumber"];
 
+    $hashedPass=password_hash($password, PASSWORD_DEFAULT);
 
-    $resultin = $mysqli->query("INSERT INTO Logins VALUES ('" .$username. "', '" .$password. "', '" .$firstName. "','" .$lastName. "','" .$rutgersID. "', '" .$apartmentNumber. "');"); 
-    $resultout = $mysqli->query("SELECT * from Logins WHERE username='" .$username. "';");
+
+    $resultin = $mysqli->query("INSERT INTO Logins VALUES ('" .$email. "', '" .$hashedPass. "', '" .$firstName. "','" .$lastName. "','" .$rutgersID. "', '" .$apartmentNumber. "');"); 
+    $resultout = $mysqli->query("SELECT * from Logins WHERE email='" .$email. "';");
     if($resultout->num_rows > 0) {
         echo "Insert was a success!";
     } else{

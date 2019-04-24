@@ -47,12 +47,12 @@
                     <div class="info-form">
                         <form action="insertToResidents.php" class="form-inlin justify-content-center">
                             <div class="form-group">
-                                <label class="sr-only">Username</label>
-                                <input type="form" class="form-control" placeholder="Enter your username" name=username>
+                                <label class="sr-only">Email</label>
+                                <input type="form" class="form-control" placeholder="Enter your email" name=email>
                             </div>
                             <div class="form-group">
                                 <label class="sr-only">Password</label>
-                                <input type="form" class="form-control" placeholder="Enter your password" name=password>
+                                <input type="password" class="form-control" placeholder="Enter your password" name=password>
                             </div>
                             <div class="form-group">
                                 <label class="sr-only">First Name</label>
