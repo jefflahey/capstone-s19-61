@@ -60,17 +60,6 @@
         </tr>
         <?php
             include "dbconnect.php";
-		    // get user input data
-            //$username = $_GET["username"];
-            //$password = $_GET["password"];
-            //$validate = "SELECT 
-            //                apt_num
-            //            FROM
-            //                Logins
-            //            WHERE
-            //                username = '" .$username. "'
-            //                AND password = '" .$password. "';"
-            //$apt_num = $conn->query($validate);
 		    $sql = "SELECT 
                         first_name, last_name, apt_num, time, status
                     FROM

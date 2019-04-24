@@ -66,11 +66,11 @@
             if(!password_verify($password, $hashedResult)){ ?>
                 <html>
                 <head>
-                    <meta http-equiv = "Refresh" content = "5; url = login.php">
+                    <meta http-equiv = "Refresh" content = "2.5; url = login.php">
                 </head>
                 <body>
                 <p><em>Password is incorrect.</em></p> <br>
-                <p><em>Redirecting in 5 seconds...</em></p>
+                <p><em>Redirecting in 2 seconds...</em></p>
                 </body>
                 </html> <?php
                 exit;

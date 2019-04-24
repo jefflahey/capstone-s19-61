@@ -18,9 +18,9 @@
 <!DOCTYPE html>
     <html>
         <head>
-             <meta http-equiv = "Refresh" content = "5; url = index.php"> 
+             <meta http-equiv = "Refresh" content = "2.5; url = index.php"> 
         </head>
         <body>
-            <p><em>Redirecting in 5 seconds...</em></p>
+            <p><em>Redirecting in 2 seconds...</em></p>
         </body>
     </html>
